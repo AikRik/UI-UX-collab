@@ -9,7 +9,13 @@ html
 					input(id="eventname" type="text" name="eventname" placeholder="Name of the event")
 					br
 				label Date:
-					input(id="date")
+					input(id="date" type="text" name="date" placeholder="DD/MM/YY")
+				label Time:
+					input(id="time" type="integer" name="time" placeholder="--:--")
+				label to:
+					input(id="to" type="integer" name="to" placehodler="--:--")
+					input(id="price" type="integer" name="price" placeholder="€")
+					br
 				label Party Link:
 					input(id="partylink" type="text" name="partylink" placeholder="Party Link")
 					
@@ -29,5 +35,6 @@ html
 					input(for="file" placeholder="Upload a picture of the event!") 
 					br
 					input(type="file" name="eventpicture")
+					input(type="text" name="musicpick" value="music")
 					br
 					button(type="submit" ) upload

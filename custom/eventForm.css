@@ -1,0 +1,26 @@
+.col-lg-5 .col-lg-offset-1 {
+	background-color: blue;
+}
+
+input {
+	margin: 5px 5px;
+}
+#eventname {
+	width: 100%;
+}
+
+#date {
+	width: 20%;
+}
+
+#time {
+	width: 20%;
+}
+
+#to {
+	width: 20%;
+}
+
+#price {
+	width: 20%;
+}

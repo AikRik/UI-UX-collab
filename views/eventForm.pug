@@ -1,0 +1,33 @@
+html
+	head
+		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+
+	body
+		div(id="createEventForm")
+			form(method="POST" action="/eventForm")
+				label Event name:
+					input(id="eventname" type="text" name="eventname" placeholder="Name of the event")
+					br
+				label Date:
+					input(id="date")
+				label Party Link:
+					input(id="partylink" type="text" name="partylink" placeholder="Party Link")
+					
+				label Ticket Link:
+					input(id="ticketlink" type="text" name="ticketlink" placeholder="Ticket Link")
+					br
+				label Venue
+					input(id="venue" type="text" name="venue" placeholder="Venue")
+				label Location
+					input(id="location" type="text" name="location" placeholder="Location")
+				label City
+					input(id="city" type="text" name="city" placeholder="City")
+					br
+					br
+				form(action="/images" method="POST" enctype="multipart/form-data")
+				
+					input(for="file" placeholder="Upload a picture of the event!") 
+					br
+					input(type="file" name="eventpicture")
+					br
+					button(type="submit" ) upload

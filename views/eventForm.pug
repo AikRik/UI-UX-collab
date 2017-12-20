@@ -3,12 +3,12 @@ html
 		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
 
 	body
-		form(method="POST" action="/createEvent")
+		form(method="POST" action="/eventForm" enctype="multipart/form-data")
 			label Event name:
 				input(id="eventname" type="text" name="eventname" placeholder="Name of the event")
 				br
 			label Date:
-				input(id="date" type="text" name="date" placeholder="DD/MM/YY")
+				input(id="date" type="date" name="date" placeholder="DD/MM/YY")
 			label Time:
 				input(id="time" type="integer" name="time" placeholder="--:--")
 			label to:
@@ -29,27 +29,29 @@ html
 				input(id="city" type="text" name="city" placeholder="City")
 				br
 				br
-			button(id=(createEventButton)) create
+				input(id="eventpicture" type="file" name="eventpicture")
+				br
+				button(id="picturesubmit" type="submit") CREATE EVENT
+			
 
-	div(id="createEventForm")
-		form(action="/eventForm" method="POST" enctype="multipart/form-data")
-					
-			input(id="eventpicture" type="file" name="eventpicture")
-			br
-			button(id="picturesubmit" type="submit" ) upload
+		//- div(id="createEventForm")
+			
 
 	//- script.
 	//- 	$(document).ready(function(){
 	//- 		$("#picturesubmit").click(function(e){
+	//- 		var uploadedimg = $("input[type=file]").val()
+
+	//- 		console.log("uploaddedimg", uploadedimg)
 	//- 			$.ajax({
 	//- 			url: "/eventForm",
 	//- 			enctype: "multipart/form-data",
 	//- 			type: "POST",
-	//- 			datatype: jpg,
+	//- 			data: file,
 	//- 			success: function(result){
 	//- 					console.log(succes)
 	//- 					},
-	//- 			error: function(error){
+	//- 			error: function(err){
 	//- 				console.log(err)
 	//- 			}
 

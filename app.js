@@ -6,6 +6,7 @@ const session = require('express-session')
 const pg = require("pg")
 var multer  = require('multer')
 var upload = multer({ dest: 'uploads/' })
+app.use(express.static('images'))
 
 require('dotenv').load();
 const Client = pg.Client;

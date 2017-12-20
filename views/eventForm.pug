@@ -1,114 +1,49 @@
 html
 	head
 		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
 
 	body
-		form(method="POST" action="/eventForm" enctype="multipart/form-data")
-			label Event name:
-				input(id="eventname" type="text" name="eventname" placeholder="Name of the event")
-				br
-			label Date:
-				input(id="date" type="date" name="date" placeholder="DD/MM/YY")
-			label Time:
-				input(id="time" type="integer" name="time" placeholder="--:--")
-			label to:
-				input(id="to" type="integer" name="to" placehodler="--:--")
-				input(id="price" type="integer" name="price" placeholder="€")
-				br
-			label Party Link:
-				input(id="partylink" type="text" name="partylink" placeholder="Party Link")
-					
-			label Ticket Link:
-				input(id="ticketlink" type="text" name="ticketlink" placeholder="Ticket Link")
-				br
-			label Venue
-				input(id="venue" type="text" name="venue" placeholder="Venue")
-			label Location
-				input(id="location" type="text" name="location" placeholder="Location")
-			label City
-				input(id="city" type="text" name="city" placeholder="City")
-				br
-				br
-				input(id="eventpicture" type="file" name="eventpicture")
-				br
-				button(id="picturesubmit" type="submit") CREATE EVENT
-			
 
-		//- div(id="createEventForm")
-			
+		div(class="container-fluid")
+			form(method="POST" action="/eventForm" enctype="multipart/form-data")
+				div(class="row form-group")
+					div(class="col-lg-5 col-lg-offset-1" id="a")
+						input(id="eventname" class="form-control" type="text" name="eventname" placeholder="Name of the event")
+					div(class="col-lg-5" id="b")
+						input(id="date" class="form-control" type="date" name="date" placeholder="")
+						label Time:
+						input(id="time" class="form-control" type="time" name="time" placeholder="")
+						label to:
+						input(id="to" class="form-control" type="time" name="totime" placeholder="")
+						input(id="price" class="form-control" type="number" min="0" max="10000" step="1" name="price" placeholder="\u20AC")
+				div(class="row form-group")
+					div(class="col-lg-5 col-lg-offset-1" id="c")
+						input(id="partylink" class="form-control" type="url" name="partylink" placeholder="Party link")
+					div(class="col-lg-5" id="d")
+						input(id="ticketlink" class="form-control" type="url" name="ticketlink" placeholder="Ticket link")
+				div(class="row form-group")
+					div(class="col-lg-3 col-lg-offset-1" id="e")
+						input(id="venue" class="form-control" type="text" name="venue" placeholder="Venue")
+					div(class="col-lg-4" id="f")
+						input(id="location" class="form-control" type="text" name="location" placeholder="Location")
+					div(class="col-lg-3" id="g")
+						input(id="city" class="form-control" type="text" name="city" placeholder="City")
+				div(class="row form-group")
+					div(class="col-lg-3 col-lg-offset-1" id="h")
+						label Upload a picture of the event
+					div(class="col-lg-3" id="i")
+						input(class="form-control" type="file" name="eventpicture")
+					div(class="col-lg-3 col-lg-offset-1" id="j")
+						button(id="musicbtn" type="button" class="btn btn-light") Music style
+				div(class="row form-group")
+					div(class="col-lg-10 col-lg-offset-1" id="k")
+						textarea(id="info" class="form-control" type="text" name="info" placeholder="More information...")
+				div(class="row form-group")
+					div(class="col-lg-2 col-lg-offset-5" id="l")
+						button(id="eventbtn" type="submit" class="btn btn-light") Add event
 
-	//- script.
-	//- 	$(document).ready(function(){
-	//- 		$("#picturesubmit").click(function(e){
-	//- 		var uploadedimg = $("input[type=file]").val()
-
-	//- 		console.log("uploaddedimg", uploadedimg)
-	//- 			$.ajax({
-	//- 			url: "/eventForm",
-	//- 			enctype: "multipart/form-data",
-	//- 			type: "POST",
-	//- 			data: file,
-	//- 			success: function(result){
-	//- 					console.log(succes)
-	//- 					},
-	//- 			error: function(err){
-	//- 				console.log(err)
-	//- 			}
-
-
-	//- 			})
-	//- 		})
-	//- 	})
-
-
-
-
-
-
-
-
-
-
-//- $.ajax( {
-//- 						url: "/suggestion",
-//- 						datatype: "json",
-//- 						type: "POST",
-//- 						data: suggestion,						
-//- 						success: function(result) {
-//- 							$("p").html("Who do you mean: " + result.input)
-//- 							console.log("Who do you mean: ", result.input)
-//- 						},
-//- 						error: function(err) {
-//- 							console.log(err)
-//- 						} 
-//- 					})
-//- 				})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+style
+	include ../public/custom/eventForm.css

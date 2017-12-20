@@ -1,6 +1,7 @@
 module.exports=(app,client, upload)=>{
 
 	app.get("/eventForm", (req,res)=>{
+    debugger
 		res.render("eventForm")
 	}),
   app.get("/createEvent",(req,res)=>{
@@ -34,14 +35,14 @@ module.exports=(app,client, upload)=>{
       var eventname = req.body.eventname,
         date = req.body.date,
         starttime = req.body.time,
-        endtime = req.body.to,
+        endtime = req.body.totime,
         price = req.body.price,
         partylink = req.body.partylink,
         ticketlink = req.body.ticketlink,
         venue = req.body.venue,
         location = req.body.location,
         city = req.body.city,
-        information = req.body.information,
+        information = req.body.info,
         musictype = req.body.musictype
         var picture = req.file.path 
 
@@ -92,19 +93,6 @@ module.exports=(app,client, upload)=>{
     })
 
 })
-
-
-
-}
-
-
-
-
-
-    
-
-
-
 
 
 

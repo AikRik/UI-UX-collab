@@ -1,0 +1,87 @@
+body {
+	background: url("images/BACKGROUND.jpg");
+	background-repeat: no-repeat;
+	background-size: 80vw 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: black;
+}
+
+.container-fluid {
+	margin-top: 100px;
+}
+
+input {
+	margin-top: 10px;
+	font-style: italic;
+}
+
+#a {
+	//background-color: red;
+	height: 100px;
+}
+
+#b {
+	//background-color: blue;
+	height: 100px;
+}
+
+#b label {
+	float: left;
+	margin-top: 16px;
+	margin-left: 8px;
+}
+
+#b input {
+	margin-left: 8px;
+}
+
+#date {
+	width: 30%;
+	float: left;
+}
+
+#time {
+	width: 20%;
+	float: left;
+}
+
+#to {
+	width: 20%;
+	float: left;
+}
+
+#price {
+	width: 20%;
+	float: left;
+}
+
+#c {
+	//background-color: green;
+	height: 100px;
+}
+
+#d {
+	//background-color: yellow;
+	height: 100px;
+}
+
+#e {
+//	background-color: brown;
+	height: 100px;
+}
+
+#f {
+//	background-color: orange;
+	height: 100px;
+}
+
+#g {
+//	background-color: purple;
+	height: 100px;
+}
+
+#h {
+//	background-color: violet;
+	height: 100px;
+}

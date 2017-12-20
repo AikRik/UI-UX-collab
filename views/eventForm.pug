@@ -35,7 +35,12 @@ html
 					div(class="col-lg-10 col-lg-offset-1" id="h")
 						input(id="info" class="form-control" type="text" name="info" placeholder="More information...")
 				
-
+	div(id="createEventForm")
+		form(action="/eventForm" method="POST" enctype="multipart/form-data")
+					
+			input(id="eventpicture" type="file" name="eventpicture")
+			br
+			button(id="picturesubmit" type="submit" ) upload
 
 style
-	include ../custom/eventForm.css
+	include ../public/custom/eventForm.css

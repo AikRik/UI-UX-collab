@@ -5,9 +5,9 @@ const bcrypt = require("bcrypt")
 const session = require('express-session')
 const pg = require("pg")
 var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
-app.use(express.static('images'))
+var upload = multer({ dest: 'public/uploads/' })
 
+app.use(express.static("public"))
 require('dotenv').load();
 const Client = pg.Client;
 const client = new Client({
@@ -21,6 +21,7 @@ client.connect()
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
+
     secret: '2C44-4D44-WppQ38S',
     resave: true,
     saveUninitialized: true
@@ -30,7 +31,7 @@ app.set("view engine", "pug")
 
 
 require("./routes/eventForm.js")(app,client, upload)
-
+require("./routes/index.js")(app, client, upload)
 
 
 

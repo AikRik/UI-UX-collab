@@ -1,5 +1,5 @@
 body {
-	background: url("public/images/BACKGROUND.jpg");
+	background: url("images/BACKGROUND.jpg");
 	background-repeat: no-repeat;
 	background-size: 80vw 100vh;
 	background-attachment: fixed;
@@ -16,72 +16,114 @@ input {
 	font-style: italic;
 }
 
+label {
+	color: white;
+	margin-top: 17px;
+}
+
 #a {
 	//background-color: red;
-	height: 100px;
+	//height: 100px;
 }
 
 #b {
+	text-align: justify
 	//background-color: blue;
-	height: 100px;
+	//height: 100px;
 }
 
 #b label {
 	float: left;
-	margin-top: 16px;
-	margin-left: 8px;
+//	margin-left: 8px;
 }
 
 #b input {
-	margin-left: 8px;
 }
 
 #date {
-	width: 30%;
+	width: 25%;
 	float: left;
 }
 
 #time {
-	width: 20%;
+	width: 17.5%;
 	float: left;
+	margin-left: 8px;
 }
 
 #to {
-	width: 20%;
+	width: 17.5%;
 	float: left;
+	margin-left: 8px;
 }
 
 #price {
 	width: 20%;
 	float: left;
+	margin-left: 8px;
 }
 
 #c {
 	//background-color: green;
-	height: 100px;
+	//height: 100px;
 }
 
 #d {
 	//background-color: yellow;
-	height: 100px;
+	//height: 100px;
 }
 
 #e {
 //	background-color: brown;
-	height: 100px;
+	//height: 100px;
 }
 
 #f {
 //	background-color: orange;
-	height: 100px;
+//	height: 100px;
 }
 
 #g {
 //	background-color: purple;
-	height: 100px;
+//	height: 100px;
 }
 
 #h {
+	text-align: center;
 //	background-color: violet;
-	height: 100px;
+//	height: 100px;
+}
+
+#i {
+	text-align: center;
+}
+
+#j {
+	text-align: center;
+}
+
+#musicbtn {
+	margin-top: 9px;
+}
+
+#k {
+
+}
+
+textarea {
+	overflow: hidden;
+}
+
+#l {
+
+}
+
+#info {
+	height: 150px;
+}
+
+#eventbtn {
+	width: 100%;
+	font-size: 
+	//height: 40px;
 }

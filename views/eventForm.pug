@@ -8,7 +8,7 @@ html
 	body
 		//- or class="container"???
 		div(class="container-fluid")
-			form(method="POST" action="/eventForm")
+			form(method="POST" action="/createEvent")
 				div(class="row form-group")
 					div(class="col-lg-5 col-lg-offset-1" id="a")
 						input(id="eventname" class="form-control" type="text" name="eventname" placeholder="Name of the event")
@@ -25,22 +25,31 @@ html
 					div(class="col-lg-5" id="d")
 						input(id="ticketlink" class="form-control" type="url" name="ticketlink" placeholder="Ticket link")
 				div(class="row form-group")
-					div(class="col-lg-2 col-lg-offset-1" id="e")
+					div(class="col-lg-3 col-lg-offset-1" id="e")
 						input(id="venue" class="form-control" type="text" name="venue" placeholder="Venue")
-					div(class="col-lg-6" id="f")
+					div(class="col-lg-4" id="f")
 						input(id="location" class="form-control" type="text" name="location" placeholder="Location")
-					div(class="col-lg-2" id="g")
+					div(class="col-lg-3" id="g")
 						input(id="city" class="form-control" type="text" name="city" placeholder="City")
 				div(class="row form-group")
-					div(class="col-lg-10 col-lg-offset-1" id="h")
-						input(id="info" class="form-control" type="text" name="info" placeholder="More information...")
-				
-	div(id="createEventForm")
-		form(action="/eventForm" method="POST" enctype="multipart/form-data")
-					
-			input(id="eventpicture" type="file" name="eventpicture")
-			br
-			button(id="picturesubmit" type="submit" ) upload
+					div(class="col-lg-3 col-lg-offset-1" id="h")
+						label Upload a picture of the event
+					div(class="col-lg-3" id="i")
+						input(class="form-control" type="file" name="eventpicture")
+					div(class="col-lg-3 col-lg-offset-1" id="j")
+						button(id="musicbtn" type="button" class="btn btn-light") Music style
+				div(class="row form-group")
+					div(class="col-lg-10 col-lg-offset-1" id="k")
+						textarea(id="info" class="form-control" type="text" name="info" placeholder="More information...")
+				div(class="row form-group")
+					div(class="col-lg-2 col-lg-offset-5" id="l")
+						button(id="eventbtn" type="button" class="btn btn-light") Add event
 
 style
 	include ../public/custom/eventForm.css
+
+script.
+	$("document").ready()
+		$("#pictureformbutton").click()
+			let picture = $("#eventpicture").val()
+			$.post("/eventForm", {data: picture}, )

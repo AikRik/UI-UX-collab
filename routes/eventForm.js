@@ -1,6 +1,7 @@
 module.exports=(app,client, upload)=>{
 
-	app.get("public/eventForm", (req,res)=>{
+	app.get("/eventForm", (req,res)=>{
+    debugger
 		res.render("eventForm")
 	}),
   app.get("/createEvent",(req,res)=>{

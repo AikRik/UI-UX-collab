@@ -5,8 +5,8 @@ const bcrypt = require("bcrypt")
 const session = require('express-session')
 const pg = require("pg")
 var multer  = require('multer')
-var upload = multer({ dest: 'uploads/' })
-app.use(express.static("public"))
+var upload = multer({ dest: 'public/uploads' })
+app.use("/public", express.static("public"))
 require('dotenv').load();
 const Client = pg.Client;
 const client = new Client({

@@ -32,20 +32,15 @@ module.exports=(app,client, upload)=>{
     })
   }),
 
-
 	app.post('/eventForm', upload.single('eventpicture'), function (req, res, next) {
-
-  console.log("reached")
-    debugger
-    var picture = req.file.originalname
-
+   
     // match / asociate image with event
       client.query(`INSERT INTO events (eventpicture) values ('${req.file.path}')`,(err, result)=>{
           console.log("succes)")
-         res.render("index", {picture:picture})
+          var picture = req.file.path 
+
+         res.render("eventForm")
       })
     })
-   
 
-	 
 }

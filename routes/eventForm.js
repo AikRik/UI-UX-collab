@@ -22,7 +22,6 @@ module.exports=(app,client, upload)=>{
         musictype = req.body.musictype,
         picture = req.file.path 
 
-// the query to insert the data from the create event form into the database, and selecting the inserted data using returning *.
   var eventCreation = {
         text: `INSERT INTO events 
         (eventname, date, starttime, endtime, price, partylink, ticketlink, 
@@ -32,11 +31,12 @@ module.exports=(app,client, upload)=>{
         '${venue}','${location}','${city}','${information}','${musictype}','${picture}') RETURNING *;`
       }
    
-
+ // the query to insert the data from the create event form into the database, and selecting the inserted data using returning *.     
       client.query(eventCreation,(err, result)=>{
         if (err) throw err;
 
           console.log(result)
+
           // rendering the indexpage with all the selected data from the insert query.
           res.render("index",{eventname:eventname,
                               date: date,

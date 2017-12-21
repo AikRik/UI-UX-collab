@@ -5,7 +5,7 @@ html
 		p 
 		img(src=picture)
 
-		p The events: Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
+		p The events: New Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
 		|
 		p Party Link: #{partylink}, Ticket Link: #{ticketlink},
 		|
@@ -13,3 +13,10 @@ html
 		|
 		p Information: #{information}.
 		img(src=eventpicture)
+
+		p  The events: 
+			each item in allevents
+				each value, key in item
+					p #{key}: #{value} 
+					img(src=picture)
+

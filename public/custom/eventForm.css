@@ -1,5 +1,5 @@
 body {
-	background: url("images/BACKGROUND.jpg");
+	background: url("public/images/BACKGROUND.jpg");
 	background-repeat: no-repeat;
 	background-size: 80vw 100vh;
 	background-attachment: fixed;
@@ -19,6 +19,7 @@ input {
 label {
 	color: white;
 	margin-top: 17px;
+	margin-left: 7px;
 }
 
 #a {
@@ -27,13 +28,11 @@ label {
 }
 
 #b {
-	text-align: justify
-	//background-color: blue;
-	//height: 100px;
+	display: flex;
+	justify-content: space-around;
 }
 
 #b label {
-	float: left;
 //	margin-left: 8px;
 }
 
@@ -42,24 +41,20 @@ label {
 
 #date {
 	width: 25%;
-	float: left;
 }
 
 #time {
 	width: 17.5%;
-	float: left;
 	margin-left: 8px;
 }
 
 #to {
 	width: 17.5%;
-	float: left;
 	margin-left: 8px;
 }
 
 #price {
 	width: 20%;
-	float: left;
 	margin-left: 8px;
 }
 

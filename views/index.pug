@@ -5,5 +5,11 @@ html
 		p 
 		img(src=picture)
 
-		p The events:
-		img(src=allevents[0])
+		p The events: Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
+		|
+		p Party Link: #{partylink}, Ticket Link: #{ticketlink},
+		|
+		p Venue: #{venue}, Location: #{location}, City: #{city}, Musictype: #{musictype},
+		|
+		p Information: #{information}.
+		img(src=eventpicture)

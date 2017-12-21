@@ -14,7 +14,7 @@ module.exports=(app,client,upload)=>{
 			allevents.push(eventResult)
 			}
 
-
+				console.log("allevents", allevents)
 			res.render("index", {allevents: allevents,
 								picture: allevents.eventpicture})
 			

@@ -36,26 +36,46 @@ module.exports=(app,client, upload)=>{
         if (err) throw err;
 
           console.log(result)
+                client.query(`SELECT (eventname, date, starttime, endtime, price, partylink, ticketlink, 
+                              venue, location, city, information, musictype, eventpicture) 
+                              FROM events`, (err, result)=>{
+                            var allevents = []
 
-          // rendering the indexpage with all the selected data from the insert query.
-          res.render("index",{eventname:eventname,
-                              date: date,
-                              starttime: starttime,
-                              endtime: endtime,
-                              price: price,
-                              partylink: partylink,
-                              ticketlink: ticketlink,
-                              venue: venue,
-                              location: location,
-                              city: city,
-                              information: information,
-                              musictype: musictype,
-                              eventpicture: picture})
+                            for(var i = 0; i<result.rows.length; i++){
+                            console.log("Supsbro", result.rows[i])
+                            var eventResult = result.rows[i]
+
+                            allevents.push(eventResult)
+                            }
+
+
+                            res.render("index", {allevents: allevents,
+                                      picture: allevents.eventpicture,
+                                      eventname:eventname,
+                                      date: date,
+                                      starttime: starttime,
+                                      endtime: endtime,
+                                      price: price,
+                                      partylink: partylink,
+                                      ticketlink: ticketlink,
+                                      venue: venue,
+                                      location: location,
+                                      city: city,
+                                      information: information,
+                                      musictype: musictype,
+                                      eventpicture: picture})
+                            
+                          })
+                        
+                        })
+
+
+                // rendering the indexpage with all the selected data from the insert query.
+                // res.render("index",{})
 
 
     })
 
-})
 
 
 }

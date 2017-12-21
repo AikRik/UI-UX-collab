@@ -13,8 +13,7 @@ module.exports=(app,client,upload)=>{
 			allevents.push(eventResult.eventpicture)
 			}
 
-			console.log("allevents: ",allevents)
-			debugger
+
 			res.render("index", {allevents: allevents})
 			
 		})

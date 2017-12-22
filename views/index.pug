@@ -35,15 +35,13 @@ html
 					div(class="col-lg-6 col-lg-offset-3")
 						h4 #{item.musictype}
 
-					div(class="col-lg-2 col-lg-offset-3 bottomeventinfo")
+					div(class="col-lg-6 col-lg-offset-3 bottomeventinfo")
 						h5(id="nexttogif")
 							span(style='padding-right:3px; padding-top: 3px; display:inline-block;')
 								img(id="gif" src='public/images/cat.gif')
-							| #Number people are interested
-
-					div(class="col-lg-4 bottomeventinfo")
-						h5
-							a(href="#") See more
+							| #Number people are interested |			
+							span
+								a(href="#") See more 
 
 style
 	include ../public/custom/index.css

@@ -6,16 +6,20 @@ body {
 	background-color: black;
 }
 
-h1, h3, h4 {
+h1, h3, h4, p {
+	color: white;
+}
+
+.hyperlink {
+	color: white;
+}
+
+.hyperlink:hover {
 	color: white;
 }
 
 #subheader {
 	text-align: center;
-}
-
-p {
-	color: white;
 }
 
 #btndiv {

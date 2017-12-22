@@ -1,4 +1,60 @@
 html
+	head
+		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
+	body
+		include navbar.pug		
+
+		div(class="container-fluid")
+				div(class="row")
+					div(id="header" class="col-lg-6 col-lg-offset-3")
+					h3(id="subheader") Let's party on, till the music is gone!
+				div(class="row")
+					div(id="btndiv" class="col-lg-6 col-lg-offset-3")
+						button(id="eventbtn" type="button" class="btn btn-light") Click here to upload event!
+				div(class="row")
+					div(class="col-lg-6 col-lg-offset-3")
+						h3(id="upcomingevents") UPCOMING EVENTS
+				div(class="row eventinfo")
+					div(class="col-lg-6 col-lg-offset-3")
+						h3 #{date}
+					div(class="col-lg-6 col-lg-offset-3")
+						img(id="partypic" src=eventpicture)
+					div(class="col-lg-4 col-lg-offset-3")
+						h3(id="partyname") #{eventname}
+					div(class="col-lg-2")
+						h3(class="eventinforight") #{starttime} - #{endtime}
+					div(class="col-lg-4 col-lg-offset-3")
+						h4(id="partylocation") #{venue} / #{location} / #{city}
+					div(class="col-lg-2")
+						h4(class="eventinforight") &euro;#{price}
+					div(class="col-lg-2 col-lg-offset-3")
+						h4 #{musictype}
+					div(class="col-lg-2")
+						h4 
+							span
+								a(class="hyperlink" href=partylink) Link to party page
+					div(class="col-lg-2")
+						h4  
+							span
+								a(class="hyperlink" href=ticketlink) Link to ticket page
+					div(class="col-lg-6 col-lg-offset-3")
+						p Extra information: #{information}
+					div(class="col-lg-6 col-lg-offset-3 bottomeventinfo")
+						h5(id="nexttogif")
+							span(style='padding-right:3px; padding-top: 3px; display:inline-block;')
+								img(id="gif" src='public/images/cat.gif')
+							| #Number people are interested |			
+							span
+								a(href="#") See more 
+
+style
+	include ../public/custom/index.css
+
+html
 	body
 		p Your event:
 		| New Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 

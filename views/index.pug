@@ -9,7 +9,6 @@ html
 		include navbar.pug		
 
 		div(class="container-fluid")
-
 				div(class="row")
 					div(id="header" class="col-lg-6 col-lg-offset-3")
 					h3(id="subheader") Let's party on, till the music is gone!
@@ -20,6 +19,7 @@ html
 					div(class="col-lg-6 col-lg-offset-3")
 						h3(id="upcomingevents") UPCOMING EVENTS
 				div(class="row eventinfo")
+				each item in allevents
 					div(class="col-lg-6 col-lg-offset-3")
 						h3 #{item.date}
 					div(class="col-lg-6 col-lg-offset-3")

@@ -7,7 +7,6 @@ module.exports=(app,client, upload)=>{
 
 // uploading a single photo combined with the create event form. 
 	app.post('/eventForm', upload.single('eventpicture'), function (req, res, next) {
-
       var eventname = req.body.eventname,
         date = req.body.date,
         starttime = req.body.time,
@@ -32,7 +31,8 @@ module.exports=(app,client, upload)=>{
       }
    
  // the query to insert the data from the create event form into the database, and selecting the inserted data using returning *.     
-      client.query(eventCreation,(err, result)=>{
+      client.query(eventCreation, (err, result)=>{
+        console.log("inside query")
         if (err) throw err;
 
           console.log(result)

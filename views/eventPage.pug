@@ -42,3 +42,11 @@ html
 
 style
 	include ../public/custom/index.css
+
+script.
+	//- jQuery doesn't take arrow functions!!!
+	$("document").ready(()=>{
+		$("h4, h3").each(function() {
+				$(this).text($(this).text().toUpperCase());
+		})
+	})

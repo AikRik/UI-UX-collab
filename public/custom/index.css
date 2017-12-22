@@ -1,6 +1,7 @@
 body {
-	background: url("public/images/handsup4.jpeg");
+	background: url("public/images/backgroundcopy.png");
 	background-repeat: no-repeat;
+	background-size: 100%;
 	background-attachment: fixed;
 	background-position: center;
 	background-color: black;
@@ -16,8 +17,6 @@ h3, h4 {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 400;
-//	line-height: 41.8px;
-	color: #9A9AB1;
 }
 
 .hyperlink {
@@ -59,6 +58,7 @@ h3, h4 {
 
 #upcomingevents {
 	color: #BD10E0;
+	font-size: 32px;
 }
 
 #partypic {

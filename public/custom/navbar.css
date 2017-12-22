@@ -23,4 +23,5 @@ li {
 
 .dropdown-menu>li>a {
 	color: white;
+	padding: 12px 16px;
 }

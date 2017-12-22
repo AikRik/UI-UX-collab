@@ -4,9 +4,10 @@ html
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js")
 
 	body
-
+		include navbar.pug
 		div(class="container-fluid")
 			form(method="POST" action="/eventForm" enctype="multipart/form-data")
 				div(class="row form-group")
@@ -48,10 +49,6 @@ html
 style
 	include ../public/custom/eventForm.css
 
-
-
-
-script(src="https://code.jquery.com/jquery-3.2.1.min.js")
 script.
 		$(document).ready(function() {
 		// filtering all non-digets from the time, totime, and price inputfields.

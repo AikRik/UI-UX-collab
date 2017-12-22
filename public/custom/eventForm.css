@@ -1,12 +1,13 @@
 body {
-	background: url("public/images/handsup4.jpeg");
+	background: url("public/images/backgroundcopy.png");
 	background-repeat: no-repeat;
+	background-size: 100%;
 	background-attachment: fixed;
 	background-position: center;
 	background-color: black;
 }
 
-.container-fluid {
+form {
 	margin-top: 100px;
 }
 

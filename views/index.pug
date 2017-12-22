@@ -4,13 +4,8 @@ html
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-
-		script.
-			$("document").ready(()=>{
-				$('h4').val($('h4').val().toUpperCase())
-			})
 	body
-		include navbar.pug		
+		include navbar.pug
 
 		div(class="container-fluid")
 				div(class="row")
@@ -20,7 +15,7 @@ html
 						h3(id="subheader") Let's party on, till the music is gone!
 				div(class="row")
 					div(id="btndiv" class="col-lg-6 col-lg-offset-3")
-						button(id="eventbtn" type="button" class="btn btn-light") CLICK HERE TO UPLOAD EVENT!
+						a(href="eventForm" id="eventbtn" type="button" class="btn btn-light") CLICK HERE TO UPLOAD EVENT!
 				div(class="row")
 					div(class="col-lg-6 col-lg-offset-3")
 						h3(id="upcomingevents") UPCOMING EVENTS
@@ -51,3 +46,11 @@ html
 
 style
 	include ../public/custom/index.css
+
+script.
+	//- jQuery doesn't take arrow functions!!!
+	$("document").ready(()=>{
+		$("h4, h3").each(function() {
+				$(this).text($(this).text().toUpperCase());
+		})
+	})

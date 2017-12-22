@@ -10,6 +10,16 @@ h1, h3, h4, p {
 	color: white;
 }
 
+h3, h4 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+//	line-height: 41.8px;
+	color: #9A9AB1;
+}
+
 .hyperlink {
 	color: white;
 }
@@ -18,7 +28,19 @@ h1, h3, h4, p {
 	color: white;
 }
 
+#header>img {
+	width: 100%;
+	margin-top: 100px;
+//	margin-bottom: 100px;
+}
+
 #subheader {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 30px;
+	font-style: italic;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 41.8px;
 	text-align: center;
 }
 
@@ -27,6 +49,9 @@ h1, h3, h4, p {
 }
 
 #eventbtn {
+	margin: 50px 0px;
+	padding: 7px 70px;
+	font-size: 16px;
 	text-align: center;
 	background-color: #BD10E0;
 	color: white;
@@ -58,10 +83,6 @@ h5, a {
 }
 
 #gif {
-	width: 14px;
-	height: 14px;
-}
-
-#nexttogif {
-	margin-bottom: 8px;
+	width: 30px;
+	height: 30px;
 }

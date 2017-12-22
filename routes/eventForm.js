@@ -32,17 +32,14 @@ module.exports=(app,client, upload)=>{
    
  // the query to insert the data from the create event form into the database, and selecting the inserted data using returning *.     
       client.query(eventCreation, (err, result)=>{
-        console.log("inside query")
         if (err) throw err;
 
-          console.log(result)
                 client.query(`SELECT (eventname, date, starttime, endtime, price, partylink, ticketlink, 
                               venue, location, city, information, musictype, eventpicture) 
                               FROM events`, (err, result)=>{
                             var allevents = []
 
                             for(var i = 0; i<result.rows.length; i++){
-                            console.log("Supsbro", result.rows[i])
                             var eventResult = result.rows[i]
 
                             allevents.push(eventResult)

@@ -46,22 +46,10 @@ html
 					div(class="col-lg-6 col-lg-offset-3 bottomeventinfo")
 						h5(id="nexttogif")
 							span(style='padding-right:3px; padding-top: 3px; display:inline-block;')
-								img(id="gif" src='public/images/cat.gif')
+								img(id="gif" src='public/images/cat2.gif')
 							| #Number people are interested |			
 							span
 								a(href="#") See more 
 
 style
 	include ../public/custom/index.css
-
-html
-	body
-		p Your event:
-		| New Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
-		|
-		p Party Link: #{partylink}, Ticket Link: #{ticketlink},
-		|
-		p Venue: #{venue}, Location: #{location}, City: #{city}, Musictype: #{musictype},
-		|
-		p Information: #{information}.
-		img(src=eventpicture)

@@ -5,16 +5,22 @@ html
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 
+		script.
+			$("document").ready(()=>{
+				$('h4').val($('h4').val().toUpperCase())
+			})
 	body
 		include navbar.pug		
 
 		div(class="container-fluid")
 				div(class="row")
 					div(id="header" class="col-lg-6 col-lg-offset-3")
-					h3(id="subheader") Let's party on, till the music is gone!
+						img(src="public/images/BaNGERz@3x.png")
+					div(id="header" class="col-lg-6 col-lg-offset-3")
+						h3(id="subheader") Let's party on, till the music is gone!
 				div(class="row")
 					div(id="btndiv" class="col-lg-6 col-lg-offset-3")
-						button(id="eventbtn" type="button" class="btn btn-light") Click here to upload event!
+						button(id="eventbtn" type="button" class="btn btn-light") CLICK HERE TO UPLOAD EVENT!
 				div(class="row")
 					div(class="col-lg-6 col-lg-offset-3")
 						h3(id="upcomingevents") UPCOMING EVENTS
@@ -41,7 +47,7 @@ html
 								img(id="gif" src='public/images/cat.gif')
 							| #Number people are interested |			
 							span
-								a(href="#") See more 
+								a(id="redirect" href="#") See more 
 
 style
 	include ../public/custom/index.css

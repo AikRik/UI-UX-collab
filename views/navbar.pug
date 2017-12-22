@@ -1,36 +1,43 @@
 html
 	head
+
 		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js")
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootscript(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js")strap.min.css')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 
+		script.
+			$("document").ready(() =>{
+				$(".dropdown-toggle").dropdown()
+			
+			})
 	body
-		nav(class="navbar navbar-inverse")
+		nav(class="navbar navbar-inverse navbar-fixed-top")
 			div(class="container-fluid")
 				div(class="navbar-header")
-					a(class="navbar-brand" href="#")
-						img(src="public/images/BaNGERz@3x.png")
-				ul(class="nav navbar-nav navbar-right")
-					li.dropdown
-						a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-							| Hamburger menu
-							span.caret
-						ul.dropdown-menu
-							li
-								a(href='#') Action
-							li
-								a(href='#') Another action
-							li
-								a(href='#') Something else here
-							li.divider(role='separator')
-							li
-								a(href='#') Separated link
-							li.divider(role='separator')
-							li
-								a(href='#') One more separated link
+					a(class="navbar-brand" href="/")
+						img(src="public/images/BaNGERz@3x.png" alt="Bangerz")
+
+				div(class="collapse navbar-collapse")
+					ul(class="nav navbar-nav navbar-right")
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+								i.glyphicon.glyphicon-align-justify
+								span.caret
+							ul.dropdown-menu
+								li
+									a(href='#') PROFILE
+								li
+									a(href='#') MY EVENTS
+								li
+									a(href='#') MESSAGES
+								li
+									a(href='#') ABOUT BANGERZ
 
 		div(id="spacer")
 
 style
 	include ../public/custom/navbar.css
+
+

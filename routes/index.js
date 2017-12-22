@@ -14,8 +14,7 @@ module.exports=(app,client,upload)=>{
 			}
 
 				console.log("allevents", allevents)
-			res.render("index", {allevents: allevents,
-								picture: allevents.eventpicture})
+			res.render("index", {allevents: allevents})
 			
 		})
 	

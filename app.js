@@ -32,7 +32,7 @@ app.set("view engine", "pug")
 
 require("./routes/eventForm.js")(app,client, upload)
 require("./routes/index.js")(app, client, upload)
-
+require("./routes/eventPage")(app,client, upload)
 
 
 app.listen(3005, function(){

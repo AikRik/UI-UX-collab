@@ -21,19 +21,19 @@ html
 						h3(id="upcomingevents") UPCOMING EVENTS
 				div(class="row eventinfo")
 					div(class="col-lg-6 col-lg-offset-3")
-						h3 #{date} {DD/MM/YY ACTUAL DAY}
+						h3 #{item.date}
 					div(class="col-lg-6 col-lg-offset-3")
-						img(id="partypic" src="public/images/event1.png")
+						img(id="partypic" src=item.eventpicture)
 					div(class="col-lg-4 col-lg-offset-3")
-						h3(id="partyname") PARTY NAME ALL CAPS
+						h3(id="partyname") #{item.eventname}
 					div(class="col-lg-2")
-						h3(class="eventinforight") FROM - UNTIL
+						h3(class="eventinforight") #{item.starttime} - #{item.endtime}
 					div(class="col-lg-4 col-lg-offset-3")
-						h4(id="partylocation") VENUE / ADDRESS / CITY
+						h4(id="partylocation") #{item.venue} / #{item.location} / #{item.city}
 					div(class="col-lg-2")
-						h4(class="eventinforight") &euro;PRICE
+						h4(class="eventinforight") &euro;#{item.price}
 					div(class="col-lg-6 col-lg-offset-3")
-						h4 GENRES
+						h4 #{item.musictype}
 
 					div(class="col-lg-2 col-lg-offset-3 bottomeventinfo")
 						h5(id="nexttogif")

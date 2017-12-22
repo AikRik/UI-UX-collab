@@ -47,3 +47,73 @@ html
 
 style
 	include ../public/custom/eventForm.css
+
+
+
+
+script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+script.
+		$(document).ready(function() {
+		// filtering all non-digets from the time, totime, and price inputfields.
+		$('input[name="time"]').keyup(function(e){
+		  if (/\D/g.test(this.value))
+		  {
+		    this.value = this.value.replace(/\D/g, '');
+		  }
+		}),
+		$('input[name="totime"]').keyup(function(e){
+		  if (/\D/g.test(this.value))
+		  {
+		    this.value = this.value.replace(/\D/g, '');
+		  }
+		}),
+		$('input[name="price"]').keyup(function(e){
+		  if (/\D/g.test(this.value))
+		  {
+		    this.value = this.value.replace(/\D/g, '');
+		  }
+		}),
+
+		// checking for empty string in input fields
+		$("form").submit(function(event) {
+			let eventName = $("#eventname").val()
+			let datum = $("#date").val()
+			let startingtime = $("#time").val()	
+			let endingtime  =$("#to").val()
+			let pricing=$("#price").val()
+			let partyingLink = $("#partylink").val()
+			let ticketsLink =$("#ticketlink").val()
+			let venues = $("#venue").val()
+			let locations = $("#location").val()
+			let cities = $("#city").val()
+			let pic = $("#eventpicture").val()
+
+			var numbers = /^[0-9]+$/;  
+			
+			if(eventName === ""|| venues === "" || location === "" || cities === "" || partyingLink === "") {
+				event.preventDefault()
+				alert("You have yet to complete the form!")
+			}
+		}) 
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

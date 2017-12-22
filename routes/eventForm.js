@@ -49,9 +49,7 @@ module.exports=(app,client, upload)=>{
                             }
 
 
-                            res.render("index", {allevents: allevents,
-                                      picture: allevents.eventpicture,
-                                      eventname:eventname,
+                            res.render("eventPage", {eventname:eventname,
                                       date: date,
                                       starttime: starttime,
                                       endtime: endtime,

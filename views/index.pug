@@ -2,21 +2,10 @@ html
 	head
 	body
 		h1 Index page
-		p 
-		img(src=picture)
-
-		p The events: New Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
-		|
-		p Party Link: #{partylink}, Ticket Link: #{ticketlink},
-		|
-		p Venue: #{venue}, Location: #{location}, City: #{city}, Musictype: #{musictype},
-		|
-		p Information: #{information}.
-		img(src=eventpicture)
-
 		p  The events: 
 			each item in allevents
-				each value, key in item
-					p #{key}: #{value} 
-					img(src=picture)
-
+				p Event Name: #{item.eventname} Date: #{item.date} Start Time: #{item.starttime} End Time: #{item.endtime} Price €: #{item.price}
+				| Party Link: #{item.partylink} Ticket Link: #{item.ticketlink} 
+				| Venue: #{item.venue} Location: #{item.location} City: #{item.city} Information: #{item.information} Music Type: #{item.musictype}         
+				br
+				img(src= item.eventpicture)

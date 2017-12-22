@@ -1,0 +1,18 @@
+nav {
+	position: fixed;
+}
+
+#spacer {
+	height: 52px;
+}
+
+.navbar-brand {
+	padding-top: 0px;
+	padding-left: 0px;
+}
+
+nav img {
+	height: 50px;
+	width: auto;
+	margin-top: 0px;
+}

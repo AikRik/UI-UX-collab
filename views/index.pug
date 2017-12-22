@@ -1,22 +1,49 @@
 html
 	head
+		script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
 	body
-		h1 Index page
-		p 
-		img(src=picture)
+		include navbar.pug		
 
-		p The events: New Eventname: #{eventname}, Date: #{date}, Start time: #{starttime}, End time: #{endtime}, Price €: #{price}, 
-		|
-		p Party Link: #{partylink}, Ticket Link: #{ticketlink},
-		|
-		p Venue: #{venue}, Location: #{location}, City: #{city}, Musictype: #{musictype},
-		|
-		p Information: #{information}.
-		img(src=eventpicture)
+		div(class="container-fluid")
 
-		p  The events: 
-			each item in allevents
-				each value, key in item
-					p #{key}: #{value} 
-					img(src=picture)
+				div(class="row")
+					div(id="header" class="col-lg-6 col-lg-offset-3")
+					h3(id="subheader") Let's party on, till the music is gone!
+				div(class="row")
+					div(id="btndiv" class="col-lg-6 col-lg-offset-3")
+						button(id="eventbtn" type="button" class="btn btn-light") Click here to upload event!
+				div(class="row")
+					div(class="col-lg-6 col-lg-offset-3")
+						h3(id="upcomingevents") UPCOMING EVENTS
+				div(class="row eventinfo")
+					div(class="col-lg-6 col-lg-offset-3")
+						h3 #{date} {DD/MM/YY ACTUAL DAY}
+					div(class="col-lg-6 col-lg-offset-3")
+						img(id="partypic" src="public/images/event1.png")
+					div(class="col-lg-4 col-lg-offset-3")
+						h3(id="partyname") PARTY NAME ALL CAPS
+					div(class="col-lg-2")
+						h3(class="eventinforight") FROM - UNTIL
+					div(class="col-lg-4 col-lg-offset-3")
+						h4(id="partylocation") VENUE / ADDRESS / CITY
+					div(class="col-lg-2")
+						h4(class="eventinforight") &euro;PRICE
+					div(class="col-lg-6 col-lg-offset-3")
+						h4 GENRES
 
+					div(class="col-lg-2 col-lg-offset-3 bottomeventinfo")
+						h5(id="nexttogif")
+							span(style='padding-right:3px; padding-top: 3px; display:inline-block;')
+								img(id="gif" src='public/images/cat.gif')
+							| #Number people are interested
+
+					div(class="col-lg-4 bottomeventinfo")
+						h5
+							a(href="#") See more
+
+style
+	include ../public/custom/index.css

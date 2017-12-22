@@ -1,0 +1,63 @@
+body {
+	background: url("public/images/handsup4.jpeg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: black;
+}
+
+h1, h3, h4 {
+	color: white;
+}
+
+#subheader {
+	text-align: center;
+}
+
+p {
+	color: white;
+}
+
+#btndiv {
+	text-align: center;
+}
+
+#eventbtn {
+	text-align: center;
+	background-color: #BD10E0;
+	color: white;
+}
+
+#upcomingevents {
+	color: #BD10E0;
+}
+
+#partypic {
+	width: 100%;
+}
+
+#partyname {
+//	float: left;
+}
+
+.bottomeventinfo {
+	border-bottom: 2px solid #BD10E0;
+}
+
+.eventinforight {
+	float: right;
+}
+
+h5, a {
+	text-decoration: none;
+	color: #BD10E0;	
+}
+
+#gif {
+	width: 14px;
+	height: 14px;
+}
+
+#nexttogif {
+	margin-bottom: 8px;
+}

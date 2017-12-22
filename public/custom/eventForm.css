@@ -1,7 +1,6 @@
 body {
 	background: url("public/images/handsup4.jpeg");
 	background-repeat: no-repeat;
-	background-size: ;
 	background-attachment: fixed;
 	background-position: center;
 	background-color: black;
@@ -22,18 +21,9 @@ label {
 	margin-left: 7px;
 }
 
-#a {
-	//background-color: red;
-	//height: 100px;
-}
-
 #b {
 	display: flex;
 	justify-content: space-around;
-}
-
-#b label {
-//	margin-left: 8px;
 }
 
 #b input {
@@ -58,35 +48,12 @@ label {
 	margin-left: 8px;
 }
 
-#c {
-	//background-color: green;
-	//height: 100px;
-}
-
-#d {
-	//background-color: yellow;
-	//height: 100px;
-}
-
-#e {
-//	background-color: brown;
-	//height: 100px;
-}
-
-#f {
-//	background-color: orange;
-//	height: 100px;
-}
-
-#g {
-//	background-color: purple;
-//	height: 100px;
-}
-
 #h {
 	text-align: center;
-//	background-color: violet;
-//	height: 100px;
+}
+
+#uploadtext {
+	text-align: left;
 }
 
 #i {
@@ -99,18 +66,12 @@ label {
 
 #musicbtn {
 	margin-top: 9px;
-}
-
-#k {
-
+	background-color: #BD10E0;
+	color: white;
 }
 
 textarea {
 	overflow: hidden;
-}
-
-#l {
-
 }
 
 #info {
@@ -119,6 +80,6 @@ textarea {
 
 #eventbtn {
 	width: 100%;
-	font-size: 
-	//height: 40px;
+	background-color: #BD10E0;
+	color: white;
 }

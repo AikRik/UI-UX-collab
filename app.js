@@ -16,6 +16,8 @@ const client = new Client({
     database: process.env.database,
     password: process.env.password,
     port: 5432
+}, function(err){
+	console.log("ERRORRR", err)
 })
 client.connect()
 

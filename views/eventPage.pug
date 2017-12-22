@@ -9,15 +9,6 @@ html
 		include navbar.pug		
 
 		div(class="container-fluid")
-				div(class="row")
-					div(id="header" class="col-lg-6 col-lg-offset-3")
-					h3(id="subheader") Let's party on, till the music is gone!
-				div(class="row")
-					div(id="btndiv" class="col-lg-6 col-lg-offset-3")
-						button(id="eventbtn" type="button" class="btn btn-light") Click here to upload event!
-				div(class="row")
-					div(class="col-lg-6 col-lg-offset-3")
-						h3(id="upcomingevents") UPCOMING EVENTS
 				div(class="row eventinfo")
 					div(class="col-lg-6 col-lg-offset-3")
 						h3 #{date}
@@ -48,8 +39,6 @@ html
 							span(style='padding-right:3px; padding-top: 3px; display:inline-block;')
 								img(id="gif" src='public/images/cat2.gif')
 							| #Number people are interested |			
-							span
-								a(href="#") See more 
 
 style
 	include ../public/custom/index.css

@@ -35,7 +35,7 @@ html
 					div(class="col-lg-3 col-lg-offset-1" id="h")
 						label(id="uploadtext") Upload a picture of the event
 					div(class="col-lg-3" id="i")
-						input(class="form-control" type="file" name="eventpicture")
+						input(id="pic" class="form-control" type="file" name="eventpicture")
 					div(class="col-lg-3 col-lg-offset-1" id="j")
 						input(id="genre" name="musictype" type="text" class="form-control" placeholder="Genres")
 				div(class="row form-group")
@@ -86,11 +86,11 @@ script.
 			let venues = $("#venue").val()
 			let locations = $("#location").val()
 			let cities = $("#city").val()
-			let pic = $("#eventpicture").val()
-
+			
+			console.log("The Picture",eventName, pic)
 			var numbers = /^[0-9]+$/;  
 			
-			if(eventName === ""|| venues === "" || location === "" || cities === "" || partyingLink === "") {
+			if(eventName === ""|| venues === "" || location === "" || cities === "" || partyingLink === ""|| document.getElementById("pic").files.length === 0) {
 				event.preventDefault()
 				alert("You have yet to complete the form!")
 			}
